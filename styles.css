@@ -1,0 +1,467 @@
+/* First page styles */
+.first-page body {
+    margin: 0;
+    padding: 0;
+    font-family: cursive, sans-serif;
+    overflow-x: hidden;
+}
+
+.first-page li {
+    padding-top: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.first-page .header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #08082f;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 10px 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.first-page .logo {
+    background-image: url("btuy.png");
+    width: 291px;
+    height: 94px;
+    background-size: cover;
+    background-position: left top;
+}
+
+.first-page .nav-buttons {
+    display: flex;
+    gap: 10px;
+    margin-right: 40px;
+    position: relative;
+}
+
+.first-page .nav-buttons ul {
+    display: flex;
+    gap: 10px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.first-page .nav-buttons li {
+    position: relative;
+}
+
+.first-page .nav-buttons a {
+    padding: 10px 20px;
+    font-size: medium;
+    font-weight: bold;
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.first-page .nav-buttons a:hover {
+    background-color: lightsteelblue;
+}
+
+.first-page .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 999;
+}
+
+.first-page .submenu a {
+    padding: 10px 20px;
+    display: block;
+    color: #08082f;
+    white-space: nowrap;
+}
+
+.first-page .submenu a:hover {
+    background-color: lightsteelblue;
+}
+
+.first-page .nav-multi:hover .submenu {
+    display: block;
+}
+
+.first-page .content {
+    padding: 150px 20px 20px;
+}
+
+.first-page .slide-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc(100vh - 100px);
+    overflow: hidden;
+    margin-top: 105px;
+}
+
+.first-page .mySlides {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.first-page .mySlides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.first-page .baslik {
+    position: absolute;
+    top: 30px;
+    left: 100px;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-weight: bolder;
+    font-size: 28px;
+    padding: 10px;
+    border-radius: 5px;
+    padding-top: 20px;
+}
+
+.first-page .text {
+    position: absolute;
+    top: 70px;
+    left: 120px;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+    .first-page .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .first-page .logo {
+        width: 234px;
+        height: 54px;
+    }
+
+    .first-page .nav-buttons {
+        width: 100%;
+        justify-content: space-around;
+        margin-right: 0;
+    }
+
+    .first-page .nav-buttons a {
+        flex: 1;
+        padding: 10px;
+        margin: 5px 0;
+    }
+
+    .first-page .submenu {
+        width: auto;
+    }
+}
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    /*background: #dde8f5;*/
+    background-color: white;
+    min-height: 100vh;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0; /* .container'ın üst kenar boşluğunu kaldırın */
+    padding: 2rem; /* Dolgu alanını azaltın */
+}
+
+.card {
+    position: relative;
+    width: 45%;
+    display: flex;
+    background: #fff;
+    height: 250px;
+    margin: 40px 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1.3);
+   
+    
+    
+}
+.imgBx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    background:#283e6d;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
+    border-radius: 20px;
+   
+}
+.card:hover .imgBx {
+    top: calc(50% - 75px);
+    left: -75px;
+    width: 150px;
+    background: #0072ce;
+    height: 150px;
+    transition: 0.5s ease-in-out;
+}
+
+.imgBx:before {
+    content: attr(data-text);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 6em;
+    color: rgba(255, 255, 255, 0.05);
+    font-weight: 700;
+}
+.imgBx i {
+    font-size: 4em;
+    color: #fff;
+    transition: 0.5s ease-in-out;
+}
+.card:hover .imgBx i {
+    font-size: 3em;
+}
+.content {
+    position: relative;
+    right: 0;
+    width: calc(100% - 75px);
+    margin-top: -70px;
+    margin-left: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content h3 {
+    margin-bottom: 5px;
+    font-size: 24px;
+}
+.content a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background:#283e6d;
+    text-decoration: none;
+    color: #fff;
+}
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+
+  .button a {
+    display: flex;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #283e6d;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .button a:hover {
+    background-color: #0072ce;
+    text-decoration: underline;
+  }
+@media (max-width: 992px) {
+    .container {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .card {
+        width: 400px;
+    }
+}
+@media (max-width: 768px) {
+    .card {
+        max-width: 300px;
+        flex-direction: column;
+        height: auto;
+        overflow: auto;
+    }
+    .imgBx, .card:hover .imgBx {
+        width: 100%;
+        height: 200px;
+        left: 0;
+    }
+    .imgBx i, .card:hover .imgBx i {
+        font-size: 4em;
+    }
+    .content {
+        position: relative;
+        width: 100%;
+    }
+}
+.biz-kimiz {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #dde8f5;
+    padding: 20px;
+    margin-top: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.13);
+    
+}
+
+.biz-kimiz img {
+    flex-shrink: 0;
+    margin-right: 15px;
+    width: 440px;
+    display: flex;
+    align-items: center; /* İkonu dikey olarak ortalamak için */
+    justify-content: center; /* İkonu yatay olarak ortalamak için */
+}
+
+.biz-kimiz .biz-kimiz-content {
+    justify-content: right;
+    color: darkblue;
+    font-size: medium;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 25px;
+    max-width: 800px; /* İçeriğin genişliğini ayarlayın */
+}
+.biz-kimiz .divider {
+    width: 25%;
+    border: 3px;
+    border-top: 1px solid darkblue; /* Çizginin rengini ayarlayın */
+    margin: 5px 0; /* Çizginin üst ve alt boşluğunu ayarlayın */
+}
+.biz-kimiz .divider,.divider hr{
+    border-width: 3px;
+    border-color: darkblue;
+}
+
+
+.biz-kimiz h2 {
+    margin: 0;
+    padding-bottom: 10px;
+    color: darkblue;
+    font-size: 2em;
+    justify-content: right;
+}
+
+.biz-kimiz p {
+    margin: left;
+    line-height: 1.5;
+    font-size: 1em;
+    justify-content: right;
+}
+
+
+.social-media {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #283e6d;
+    color: white;
+    padding: 20px;
+    margin-top: 0;
+}
+
+.social-logo img {
+    width: 291px;  /* Sosyal medya logosu boyutunu ayarlayın */
+    height: 94px;  /* Sosyal medya logosu boyutunu ayarlayın */
+}
+
+.social-text {
+    flex: 1;
+    text-align: center;
+    font-weight: bold;
+    font-size:x-large;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 5px 10px;
+}
+
+.social-icons i, .social-icons {
+    font-size: xx-large;/* Sosyal medya simge boyutunu ayarlayın */
+    margin-right: 5%;
+}
+
+.custom-footer .footer-container {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    color: #283e6d;
+    padding: 20px;
+    margin-top:0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.custom-footer .footer-container div {
+    flex: 1;
+    margin: 10px;
+}
+
+.custom-footer .contact-info, .custom-footer .map {
+    max-width: 45%;
+    
+}
+
+.custom-footer .contact-info h3, .custom-footer .map h3 {
+    margin-top: 0;
+    font-size: 1.6em;/*baslik boyutu*/
+    color:darkblue;
+}
+
+.custom-footer .contact-info p{
+    margin: 5px 0;
+    font-size: 1.2em; /* Paragraf metni boyutu ayarı */
+    line-height: 1.5; /* Satır yüksekliği ayarı */
+    color: darkblue;  /* Paragraf metni rengi ayarı */
+}
+.custom-footer .map iframe {
+    margin: 5px 0;
+    width: 100%;  /* Haritanın genişliği */
+    height: 300px; /* Haritanın sabit yüksekliği */
+    border: 0;
+    overflow: hidden;
+}
+

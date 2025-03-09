@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bursa Teknik Universitesi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body class="first-page">
+
+<div class="header">
+    <div class="logo"></div>
+    <div class="nav-buttons">
+        <ul>
+            <li><a class="active" href="https://www.btu.edu.tr/">ANA SAYFA</a></li>
+            <li class="nav-multi">
+                <a href="https://www.btu.edu.tr/">ÜNİVERSİTE</a>
+                <div class="submenu">
+                    <a href="https://www.btu.edu.tr/tr/sayfa/detay/3357/btu-hakkinda">Genel Bilgiler</a>
+                    <a href="https://www.btu.edu.tr/tr/sayfa/detay/3361/rektorun-mesaji">Rektörün Mesajı</a>
+                    <a href="https://www.btu.edu.tr/tr/sayfa/detay/3415/organizasyon-semasi">Organizasyon Şeması</a>
+                    <a href="https://www.btu.edu.tr/tr/sayfa/detay/3411/stratejik-plan">Stratejik Plan</a>
+                    <a href="https://www.btu.edu.tr/tr/sayfa/detay/6744/btu-arama-konferansi">BTÜ Arama Konferansı</a>
+                    <a href="https://btu.edu.tr/tr/sayfa/sayilarla">Sayılarla BTÜ</a>
+                    <a href="https://btu.edu.tr/tr/sayfa/detay/5778/2023-yili-mali-tablolari">BTÜ Mali Tablolar</a>
+                    <a href="https://depo.btu.edu.tr/img/sayfa/1677480396_66081b20c1a730ae4a44.pdf">Tanıtım Kataloğu</a>
+                    <a href="https://btu.edu.tr/tr/sayfa/detay/3369/kampusler">Kampüsler</a>
+                    <a href="https://btu.edu.tr/tr/sayfa/detay/3401/kurumsal-kimlik">Kurumsal Kimlik</a>
+                    
+                </div>
+            </li>
+            <li class="nav-multi">
+                <a href="https://btu.edu.tr/tr/sayfa/lisans">AKADEMİK</a>
+                <div class="submenu">
+                    <a href="https://odb.btu.edu.tr/">Programlar</a>
+                    <a href="https://mdbf.btu.edu.tr/">Fakülteler</a>
+                </div>
+            </li>
+            <li class="nav-multi">
+                <a href="https://idari.btu.edu.tr/oidb">ÖĞRENCİ
+                <div class="submenu">
+                    <a href="https://idari.btu.edu.tr/oidb">Öğrenci İşleri</a>
+                    <a href="https://btu.edu.tr/tr/sayfa/detay/4749/akademik-takvim">Akademik Takvim</a>
+                    <a href="https://engelsiz.btu.edu.tr/">Engelsiz BTÜ</a>
+                    <a href="https://bursatomer.btu.edu.tr/">Bursa TÖMER</a>
+                    <a href="https://intoffice.btu.edu.tr/tr">Dış İlişkiler Ofisi</a>
+                    <a href="https://erasmus.btu.edu.tr/">Erasmus Programı</a>
+                    <a href="https://intoffice.btu.edu.tr/tr/farabi">Farabi Değişim Programı </a>
+                    <a href="https://intoffice.btu.edu.tr/tr/mevlana">Mevlana Değişim Programı</a>
+                    <a href="https://kutuphane.btu.edu.tr/">Kütüphane</a>
+                    <a href="https://imep.btu.edu.tr/">İşletmede Mesleki Eğitim Programı(BTÜ-İMEP)</a>
+                    <a href="https://obs.btu.edu.tr/">e-Öğrenci</a>
+                    <a href="https://sks.btu.edu.tr/">BTÜ'de Yaşam</a>
+                </div>
+            </li>
+            <li class="nav-multi">
+                <a href="#">ARAŞTIRMA
+                <div class="submenu">
+                    <a href="https://www.btu.edu.tr/tr/sayfa/dis-kaynakli-projeler">Araştırma</a>
+                    <a href="https://deprem.btu.edu.tr/">Araştırma Merkezleri</a>
+                    <a href="https://dergipark.org.tr/tr/pub/arhuss">Bilimsel Dergiler</a>
+                    <a href="https://sempozyum.btu.edu.tr/">Bilimsel Etkinlikler</a>
+                    
+                </div>
+            </li>
+            <li><a href="iletisim.html">İLETİŞİM</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="slide-container">
+    <div class="mySlides">
+        <img src="o0.jpg" alt="btu">   
+    </div>
+    <div class="mySlides">
+        <img src="bilmuh.jpg" alt="bilmuh">
+    </div>
+    <div class="mySlides">
+        <img src="mimar.jpg" alt="mimar">
+    </div>
+    <div class="mySlides">
+        <img src="isletme.jpg" alt="isletme">
+    </div>
+    
+</div>
+<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let slides = document.getElementsByClassName("mySlides");
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        slides[slideIndex-1].style.display = "block";
+        setTimeout(showSlides, 2000); // 2 saniyede bir slayt değişir
+    }
+</script>
+
+<div class="container">
+    <div class="card">
+        <div class="imgBx" data-text="Öğrenci Bilgi Sistemi">
+            <i class="fa fa-cogs"></i>
+        </div>
+        <div class="content">
+            <div>
+                <h3>Öğrenci Bilgi Sistemi</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo maxime est, placeat unde quae mollitia esse distinctio voluptatem magnam expedita temporibus enim repellat atque neque corporis.</p>
+                <a href="#">Daha Fazla</a>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="imgBx" data-text="e-Kampüs">
+            <i class="fa-solid fa-handshake" style="color: #fafafa;"></i>
+        </div>
+        <div class="content">
+            <div>
+                <h3>e-Kampüs</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo maxime est, placeat unde quae mollitia esse distinctio voluptatem magnam expedita temporibus enim repellat atque neque corporis.</p>
+                <a href="#">Daha Fazla</a>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="imgBx" data-text="Sağlık Kültür Spor">
+            <i class="fa-solid fa-video" style="color: #f7f7f8;"></i>
+        </div>
+        <div class="content">
+            <div>
+                <h3>Sağlık Kültür Spor</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo maxime est, placeat unde quae mollitia esse distinctio voluptatem magnam expedita temporibus enim repellat atque neque corporis.</p>
+                <a href="#">Daha Fazla</a>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="imgBx" data-text="BTÜ-İMEP">
+            <i class="fa-solid fa-network-wired" style="color: #f9fafa;"></i>
+        </div>
+        <div class="content">
+            <div>
+                <h3>İşletmede Mesleki Eğitim</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo maxime est, placeat unde quae mollitia esse distinctio voluptatem magnam expedita temporibus enim repellat atque neque corporis.</p>
+                <a href="#">Daha Fazla</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="button"><a href="#">DAHA FAZLA</a></div>
+<div class="biz-kimiz">
+    <div class="biz-kimiz-icon"><img src="tech1.jpg"></div>
+    <div class="biz-kimiz-content">
+        <h2>Biz Kimiz</h2>
+        <hr class="divider">
+        <p>
+            Bursa Teknik Üniversitesi, Bursa'nın ikinci bir devlet üniversitesi 
+            olarak 21.07.2010 tarih ve 27648 sayılı Resmi Gazete'de yayımlanan Bakanlar Kurulu 
+            kararına göre kurulmuş olup mevcut haliyle 6 Fakülte, 1 Enstitü ve 1 Yüksekokul ile
+            eğitim-öğretim faaliyetlerine devam etmektedir.Bursa Teknik Üniversitesi donanımlı,
+            alanlarında öncü ve motivasyonu yüksek akademisyen kadrosu ile öğrencilerine yüksek 
+            kalitede eğitim hizmeti sunan dinamik bir üniversitedir.
+        </p>
+    </div>
+</div>
+
+    <footer class="custom-footer">
+        <div class="footer-container">
+            <div class="contact-info">
+                <h3>İletişim</h3>
+                <p><b>Adres:</b> Mimarsinan Mahallesi/ Mimar Sinan Bulvarı/ Eflak Cd./ No:177 16310 /Yıldırım/BURSA</p>
+                <p><b>Telefon:</b> 444 84 16</p>
+                <p><b>Email:</b>bilgi@btu.edu.tr</p>
+            </div>
+            <div class="map">
+                <h3>Harita</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3047.973784038004!2d29.127446974496603!3d40.18739686956781!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ca3eb7d9f8aba7%3A0x127e405711993447!2sBursa%20Technical%20University!5e0!3m2!1sen!2str!4v1722946340733!5m2!1sen!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </footer>
+    <div class="social-media">
+    <div class="social-logo"><img src="btuy.png"></div>
+    <div class="social-text">
+        <p>Sosyal Medyada Bizi Takip Edin!</p>
+    </div>
+    <div class="social-icons">
+    <a href="https://www.instagram.com/bursateknikuni/" target="_blank">
+        <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
+    </a>
+    <a href="https://www.twitter.com/BursaTeknikUni" target="_blank">
+        <i class="fa-brands fa-twitter" style="color: #fcfcfc;"></i>
+    </a>
+    <a href="https://www.linkedin.com/company/bursa-teknik-%C3%BCniversitesi-official/?originalSubdomain=tr" target="_blank">
+        <i class="fa-brands fa-linkedin-in" style="color: #ffffff;"></i>
+    </a>
+    </div>
+</div>
+</div>
+
+</body>
+</html>
